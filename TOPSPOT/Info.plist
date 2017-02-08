@@ -50,5 +50,25 @@
 		<string>Exo-Light.otf</string>
 		<string>Exo-Regular.otf</string>
 	</array>
+    <key>CFBundleURLTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>fb171155086712336</string>
+            </array>
+        </dict>
+    </array>
+    <key>FacebookAppID</key>
+    <string>171155086712336</string>
+    <key>FacebookDisplayName</key>
+    <string>TOPSPOT</string>
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+        <string>fbapi</string>
+        <string>fb-messenger-api</string>
+        <string>fbauth2</string>
+        <string>fbshareextension</string>
+    </array>
 </dict>
 </plist>

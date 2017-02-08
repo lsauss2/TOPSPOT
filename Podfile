@@ -6,6 +6,9 @@ target 'TOPSPOT' do
   pod 'Firebase'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
+  pod 'FacebookCore'
+  pod 'FacebookLogin'
+  pod 'FacebookShare'
   use_frameworks!
 
   # Pods for TOPSPOT
