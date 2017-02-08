@@ -22,6 +22,8 @@
 		CE1F8DD21E4B9D2700395C7C /* Exo-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE1F8DC91E4B949200395C7C /* Exo-Light.otf */; };
 		CE1F8DD31E4B9D2700395C7C /* Exo-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE1F8DCA1E4B949A00395C7C /* Exo-Regular.otf */; };
 		CE1F8DD51E4B9F6800395C7C /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1F8DD41E4B9F6800395C7C /* SignUpVC.swift */; };
+		CE1F8DD71E4BAEA100395C7C /* DiscoverListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1F8DD61E4BAEA100395C7C /* DiscoverListVC.swift */; };
+		CE1F8DDA1E4BB05C00395C7C /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1F8DD91E4BB05C00395C7C /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		CE1F8DCB1E4B95D800395C7C /* Archive.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Archive.otf; sourceTree = "<group>"; };
 		CE1F8DCC1E4B997700395C7C /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		CE1F8DD41E4B9F6800395C7C /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		CE1F8DD61E4BAEA100395C7C /* DiscoverListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverListVC.swift; sourceTree = "<group>"; };
+		CE1F8DD91E4BB05C00395C7C /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		CEE9ED7F39D09BD411BC411A /* Pods-TOPSPOT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TOPSPOT.release.xcconfig"; path = "Pods/Target Support Files/Pods-TOPSPOT/Pods-TOPSPOT.release.xcconfig"; sourceTree = "<group>"; };
 		F326F43303835DC397ACBA2B /* Pods-TOPSPOT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TOPSPOT.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TOPSPOT/Pods-TOPSPOT.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,6 +100,7 @@
 		CE1F8DAD1E4B8FD800395C7C /* TOPSPOT */ = {
 			isa = PBXGroup;
 			children = (
+				CE1F8DD81E4BB04D00395C7C /* Services */,
 				CE1F8DC51E4B946200395C7C /* Resources */,
 				CE1F8DC41E4B93F500395C7C /* Controller */,
 				CE1F8DC31E4B93EF00395C7C /* View */,
@@ -130,6 +135,7 @@
 			children = (
 				CE1F8DB01E4B8FD800395C7C /* LoginVC.swift */,
 				CE1F8DD41E4B9F6800395C7C /* SignUpVC.swift */,
+				CE1F8DD61E4BAEA100395C7C /* DiscoverListVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -145,6 +151,14 @@
 				CE1F8DCA1E4B949A00395C7C /* Exo-Regular.otf */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		CE1F8DD81E4BB04D00395C7C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CE1F8DD91E4BB05C00395C7C /* DataService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,6 +293,8 @@
 			files = (
 				CE1F8DD51E4B9F6800395C7C /* SignUpVC.swift in Sources */,
 				CE1F8DB11E4B8FD800395C7C /* LoginVC.swift in Sources */,
+				CE1F8DD71E4BAEA100395C7C /* DiscoverListVC.swift in Sources */,
+				CE1F8DDA1E4BB05C00395C7C /* DataService.swift in Sources */,
 				CE1F8DAF1E4B8FD800395C7C /* AppDelegate.swift in Sources */,
 				CE1F8DCD1E4B997700395C7C /* CustomTextField.swift in Sources */,
 			);
