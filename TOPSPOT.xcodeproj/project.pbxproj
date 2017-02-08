@@ -14,6 +14,13 @@
 		CE1F8DB61E4B8FD800395C7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE1F8DB51E4B8FD800395C7C /* Assets.xcassets */; };
 		CE1F8DB91E4B8FD800395C7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1F8DB71E4B8FD800395C7C /* LaunchScreen.storyboard */; };
 		CE1F8DC11E4B934700395C7C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE1F8DC01E4B934700395C7C /* GoogleService-Info.plist */; };
+		CE1F8DCD1E4B997700395C7C /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1F8DCC1E4B997700395C7C /* CustomTextField.swift */; };
+		CE1F8DCE1E4B9D2700395C7C /* Exo-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE1F8DC61E4B947500395C7C /* Exo-Bold.otf */; };
+		CE1F8DCF1E4B9D2700395C7C /* Archive.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE1F8DCB1E4B95D800395C7C /* Archive.otf */; };
+		CE1F8DD01E4B9D2700395C7C /* Exo-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE1F8DC71E4B947F00395C7C /* Exo-Italic.otf */; };
+		CE1F8DD11E4B9D2700395C7C /* Exo-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE1F8DC81E4B948700395C7C /* Exo-Medium.otf */; };
+		CE1F8DD21E4B9D2700395C7C /* Exo-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE1F8DC91E4B949200395C7C /* Exo-Light.otf */; };
+		CE1F8DD31E4B9D2700395C7C /* Exo-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE1F8DCA1E4B949A00395C7C /* Exo-Regular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +33,13 @@
 		CE1F8DB81E4B8FD800395C7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE1F8DBA1E4B8FD800395C7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE1F8DC01E4B934700395C7C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CE1F8DC61E4B947500395C7C /* Exo-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo-Bold.otf"; sourceTree = "<group>"; };
+		CE1F8DC71E4B947F00395C7C /* Exo-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo-Italic.otf"; sourceTree = "<group>"; };
+		CE1F8DC81E4B948700395C7C /* Exo-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo-Medium.otf"; sourceTree = "<group>"; };
+		CE1F8DC91E4B949200395C7C /* Exo-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo-Light.otf"; sourceTree = "<group>"; };
+		CE1F8DCA1E4B949A00395C7C /* Exo-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo-Regular.otf"; sourceTree = "<group>"; };
+		CE1F8DCB1E4B95D800395C7C /* Archive.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Archive.otf; sourceTree = "<group>"; };
+		CE1F8DCC1E4B997700395C7C /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		CEE9ED7F39D09BD411BC411A /* Pods-TOPSPOT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TOPSPOT.release.xcconfig"; path = "Pods/Target Support Files/Pods-TOPSPOT/Pods-TOPSPOT.release.xcconfig"; sourceTree = "<group>"; };
 		F326F43303835DC397ACBA2B /* Pods-TOPSPOT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TOPSPOT.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TOPSPOT/Pods-TOPSPOT.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,6 +94,7 @@
 		CE1F8DAD1E4B8FD800395C7C /* TOPSPOT */ = {
 			isa = PBXGroup;
 			children = (
+				CE1F8DC51E4B946200395C7C /* Resources */,
 				CE1F8DC41E4B93F500395C7C /* Controller */,
 				CE1F8DC31E4B93EF00395C7C /* View */,
 				CE1F8DC21E4B93E900395C7C /* Model */,
@@ -104,6 +119,7 @@
 		CE1F8DC31E4B93EF00395C7C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CE1F8DCC1E4B997700395C7C /* CustomTextField.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -113,6 +129,19 @@
 			children = (
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		CE1F8DC51E4B946200395C7C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CE1F8DC61E4B947500395C7C /* Exo-Bold.otf */,
+				CE1F8DCB1E4B95D800395C7C /* Archive.otf */,
+				CE1F8DC71E4B947F00395C7C /* Exo-Italic.otf */,
+				CE1F8DC81E4B948700395C7C /* Exo-Medium.otf */,
+				CE1F8DC91E4B949200395C7C /* Exo-Light.otf */,
+				CE1F8DCA1E4B949A00395C7C /* Exo-Regular.otf */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +206,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE1F8DCE1E4B9D2700395C7C /* Exo-Bold.otf in Resources */,
+				CE1F8DCF1E4B9D2700395C7C /* Archive.otf in Resources */,
+				CE1F8DD01E4B9D2700395C7C /* Exo-Italic.otf in Resources */,
+				CE1F8DD11E4B9D2700395C7C /* Exo-Medium.otf in Resources */,
+				CE1F8DD21E4B9D2700395C7C /* Exo-Light.otf in Resources */,
+				CE1F8DD31E4B9D2700395C7C /* Exo-Regular.otf in Resources */,
 				CE1F8DB91E4B8FD800395C7C /* LaunchScreen.storyboard in Resources */,
 				CE1F8DC11E4B934700395C7C /* GoogleService-Info.plist in Resources */,
 				CE1F8DB61E4B8FD800395C7C /* Assets.xcassets in Resources */,
@@ -241,6 +276,7 @@
 			files = (
 				CE1F8DB11E4B8FD800395C7C /* ViewController.swift in Sources */,
 				CE1F8DAF1E4B8FD800395C7C /* AppDelegate.swift in Sources */,
+				CE1F8DCD1E4B997700395C7C /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,14 +1,33 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Archive.otf">
+            <string>Archive</string>
+        </array>
+        <array key="Exo-Bold.otf">
+            <string>Exo-Bold</string>
+        </array>
+        <array key="Exo-Light.otf">
+            <string>Exo-Light</string>
+        </array>
+        <array key="Exo-Medium.otf">
+            <string>Exo-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TOPSPOT" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +35,151 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="topspot-logo" translatesAutoresizingMaskIntoConstraints="NO" id="cee-zF-WwZ">
+                                <rect key="frame" x="43" y="70" width="26" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="SO9-jf-JIa"/>
+                                    <constraint firstAttribute="width" constant="26" id="npE-6H-FAl"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOPSPOT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GtC-Qn-YdC">
+                                <rect key="frame" x="77" y="73" width="107" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="107" id="Rwa-TE-DMR"/>
+                                    <constraint firstAttribute="height" constant="21" id="w1z-4q-HfL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Archive" family="Archive" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <color key="highlightedColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discover and share the coolest spots around you" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="290" translatesAutoresizingMaskIntoConstraints="NO" id="aQe-JV-oGy">
+                                <rect key="frame" x="43" y="156" width="290" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="290" id="62G-U2-4zm"/>
+                                    <constraint firstAttribute="height" constant="60" id="aXR-8M-lnx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Exo-Light" family="Exo" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NQY-Mv-OF0" customClass="CustomTextField" customModule="TOPSPOT" customModuleProvider="target">
+                                <rect key="frame" x="43" y="286" width="290" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="AcN-yp-I6w"/>
+                                    <constraint firstAttribute="width" constant="290" id="fQy-b8-VkI"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Exo-Light" family="Exo" pointSize="12"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Gg-QE-Dcz" customClass="CustomTextField" customModule="TOPSPOT" customModuleProvider="target">
+                                <rect key="frame" x="43" y="353" width="290" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="MZT-7q-hNo"/>
+                                    <constraint firstAttribute="width" constant="290" id="dxi-nX-nvp"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Exo-Light" family="Exo" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CNV-P5-Dyu">
+                                <rect key="frame" x="43" y="434" width="175" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="175" id="5sO-ty-VEi"/>
+                                    <constraint firstAttribute="height" constant="30" id="TE2-HB-6qA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Exo-Bold" family="Exo" pointSize="16"/>
+                                <state key="normal" title="Login now">
+                                    <color key="titleColor" red="1" green="0.69411764705882351" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fb-icon" translatesAutoresizingMaskIntoConstraints="NO" id="Lad-EP-d6o">
+                                <rect key="frame" x="43" y="505" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="51i-WG-RSE"/>
+                                    <constraint firstAttribute="width" constant="20" id="dcO-fu-SM3"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P7p-Xb-GbO">
+                                <rect key="frame" x="73" y="500" width="192" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="192" id="K7Y-WY-zYD"/>
+                                    <constraint firstAttribute="height" constant="30" id="O3r-Ep-c3k"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Exo-Light" family="Exo" pointSize="14"/>
+                                <state key="normal" title="Connect with Facebook">
+                                    <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not yet registered?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CIl-LT-vNk">
+                                <rect key="frame" x="43" y="581" width="106" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="106" id="Hp6-Wx-NyG"/>
+                                    <constraint firstAttribute="height" constant="21" id="ifh-wI-sAz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Exo-Medium" family="Exo" pointSize="12"/>
+                                <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cuz-Ph-Zqb">
+                                <rect key="frame" x="153" y="581" width="153" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="5KL-2W-okn"/>
+                                    <constraint firstAttribute="width" constant="153" id="Aze-3t-zgh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Exo-Medium" family="Exo" pointSize="12"/>
+                                <state key="normal" title="Sign up here">
+                                    <color key="titleColor" red="1" green="0.69411764705882351" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AoL-Pv-6Mo">
+                                <rect key="frame" x="214" y="353" width="119" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="119" id="5o3-yZ-OEy"/>
+                                    <constraint firstAttribute="height" constant="34" id="hYz-rE-eCW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Exo-Medium" family="Exo" pointSize="10"/>
+                                <state key="normal" title="forgot password?">
+                                    <color key="titleColor" red="1" green="0.69411764705882351" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="P7p-Xb-GbO" firstAttribute="leading" secondItem="Lad-EP-d6o" secondAttribute="trailing" constant="10" id="0a6-3X-yBZ"/>
+                            <constraint firstItem="NQY-Mv-OF0" firstAttribute="top" secondItem="aQe-JV-oGy" secondAttribute="bottom" constant="70" id="2kJ-QL-fRQ"/>
+                            <constraint firstItem="CNV-P5-Dyu" firstAttribute="top" secondItem="AoL-Pv-6Mo" secondAttribute="bottom" constant="47" id="2yU-RE-cdt"/>
+                            <constraint firstItem="AoL-Pv-6Mo" firstAttribute="bottom" secondItem="0Gg-QE-Dcz" secondAttribute="bottom" id="9PN-JR-HDE"/>
+                            <constraint firstItem="AoL-Pv-6Mo" firstAttribute="leading" secondItem="0Gg-QE-Dcz" secondAttribute="trailing" constant="-119" id="EFE-Sz-gE1"/>
+                            <constraint firstItem="NQY-Mv-OF0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="27" id="MJE-Su-YuH"/>
+                            <constraint firstItem="cee-zF-WwZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="QPR-qU-iwE"/>
+                            <constraint firstItem="P7p-Xb-GbO" firstAttribute="top" secondItem="CNV-P5-Dyu" secondAttribute="bottom" constant="36" id="RvC-0c-Bsi"/>
+                            <constraint firstItem="Cuz-Ph-Zqb" firstAttribute="leading" secondItem="CIl-LT-vNk" secondAttribute="trailing" constant="4" id="VY7-jS-5RF"/>
+                            <constraint firstItem="CNV-P5-Dyu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="27" id="WcQ-Pt-c4F"/>
+                            <constraint firstItem="aQe-JV-oGy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="27" id="Wif-j1-aVm"/>
+                            <constraint firstItem="0Gg-QE-Dcz" firstAttribute="top" secondItem="NQY-Mv-OF0" secondAttribute="bottom" constant="33" id="Z3m-Qq-jZK"/>
+                            <constraint firstItem="AoL-Pv-6Mo" firstAttribute="top" secondItem="0Gg-QE-Dcz" secondAttribute="top" id="cId-b7-37l"/>
+                            <constraint firstItem="Cuz-Ph-Zqb" firstAttribute="top" secondItem="P7p-Xb-GbO" secondAttribute="bottom" constant="51" id="djB-g7-HRd"/>
+                            <constraint firstItem="GtC-Qn-YdC" firstAttribute="leading" secondItem="cee-zF-WwZ" secondAttribute="trailing" constant="8" id="gJs-c6-Tpv"/>
+                            <constraint firstItem="CIl-LT-vNk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="27" id="hLB-vN-mmA"/>
+                            <constraint firstItem="Lad-EP-d6o" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="27" id="nnn-ag-NN9"/>
+                            <constraint firstItem="CIl-LT-vNk" firstAttribute="top" secondItem="P7p-Xb-GbO" secondAttribute="bottom" constant="51" id="pxZ-dv-qcH"/>
+                            <constraint firstItem="GtC-Qn-YdC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="53" id="qBT-00-JEu"/>
+                            <constraint firstItem="0Gg-QE-Dcz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="27" id="vu5-Bg-ZRC"/>
+                            <constraint firstItem="Lad-EP-d6o" firstAttribute="top" secondItem="CNV-P5-Dyu" secondAttribute="bottom" constant="41" id="wNo-SK-e4c"/>
+                            <constraint firstItem="cee-zF-WwZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="27" id="z0I-v1-etV"/>
+                            <constraint firstItem="aQe-JV-oGy" firstAttribute="top" secondItem="cee-zF-WwZ" secondAttribute="bottom" constant="60" id="zCB-A8-aCB"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="fb-icon" width="20" height="20"/>
+        <image name="topspot-logo" width="27" height="27"/>
+    </resources>
 </document>
