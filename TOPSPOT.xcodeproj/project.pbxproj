@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		56553E52AE180281D8D2D0CE /* Pods_TOPSPOT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 006FEF5471750E7C88BF394F /* Pods_TOPSPOT.framework */; };
 		CE1F8DAF1E4B8FD800395C7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1F8DAE1E4B8FD800395C7C /* AppDelegate.swift */; };
-		CE1F8DB11E4B8FD800395C7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1F8DB01E4B8FD800395C7C /* ViewController.swift */; };
+		CE1F8DB11E4B8FD800395C7C /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1F8DB01E4B8FD800395C7C /* LoginVC.swift */; };
 		CE1F8DB41E4B8FD800395C7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1F8DB21E4B8FD800395C7C /* Main.storyboard */; };
 		CE1F8DB61E4B8FD800395C7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE1F8DB51E4B8FD800395C7C /* Assets.xcassets */; };
 		CE1F8DB91E4B8FD800395C7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1F8DB71E4B8FD800395C7C /* LaunchScreen.storyboard */; };
@@ -21,13 +21,14 @@
 		CE1F8DD11E4B9D2700395C7C /* Exo-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE1F8DC81E4B948700395C7C /* Exo-Medium.otf */; };
 		CE1F8DD21E4B9D2700395C7C /* Exo-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE1F8DC91E4B949200395C7C /* Exo-Light.otf */; };
 		CE1F8DD31E4B9D2700395C7C /* Exo-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE1F8DCA1E4B949A00395C7C /* Exo-Regular.otf */; };
+		CE1F8DD51E4B9F6800395C7C /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1F8DD41E4B9F6800395C7C /* SignUpVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		006FEF5471750E7C88BF394F /* Pods_TOPSPOT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TOPSPOT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE1F8DAB1E4B8FD800395C7C /* TOPSPOT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TOPSPOT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE1F8DAE1E4B8FD800395C7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CE1F8DB01E4B8FD800395C7C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE1F8DB01E4B8FD800395C7C /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		CE1F8DB31E4B8FD800395C7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE1F8DB51E4B8FD800395C7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE1F8DB81E4B8FD800395C7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -40,6 +41,7 @@
 		CE1F8DCA1E4B949A00395C7C /* Exo-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo-Regular.otf"; sourceTree = "<group>"; };
 		CE1F8DCB1E4B95D800395C7C /* Archive.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Archive.otf; sourceTree = "<group>"; };
 		CE1F8DCC1E4B997700395C7C /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		CE1F8DD41E4B9F6800395C7C /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		CEE9ED7F39D09BD411BC411A /* Pods-TOPSPOT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TOPSPOT.release.xcconfig"; path = "Pods/Target Support Files/Pods-TOPSPOT/Pods-TOPSPOT.release.xcconfig"; sourceTree = "<group>"; };
 		F326F43303835DC397ACBA2B /* Pods-TOPSPOT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TOPSPOT.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TOPSPOT/Pods-TOPSPOT.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,7 +101,6 @@
 				CE1F8DC31E4B93EF00395C7C /* View */,
 				CE1F8DC21E4B93E900395C7C /* Model */,
 				CE1F8DAE1E4B8FD800395C7C /* AppDelegate.swift */,
-				CE1F8DB01E4B8FD800395C7C /* ViewController.swift */,
 				CE1F8DB21E4B8FD800395C7C /* Main.storyboard */,
 				CE1F8DB51E4B8FD800395C7C /* Assets.xcassets */,
 				CE1F8DB71E4B8FD800395C7C /* LaunchScreen.storyboard */,
@@ -127,6 +128,8 @@
 		CE1F8DC41E4B93F500395C7C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				CE1F8DB01E4B8FD800395C7C /* LoginVC.swift */,
+				CE1F8DD41E4B9F6800395C7C /* SignUpVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -274,7 +277,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE1F8DB11E4B8FD800395C7C /* ViewController.swift in Sources */,
+				CE1F8DD51E4B9F6800395C7C /* SignUpVC.swift in Sources */,
+				CE1F8DB11E4B8FD800395C7C /* LoginVC.swift in Sources */,
 				CE1F8DAF1E4B8FD800395C7C /* AppDelegate.swift in Sources */,
 				CE1F8DCD1E4B997700395C7C /* CustomTextField.swift in Sources */,
 			);

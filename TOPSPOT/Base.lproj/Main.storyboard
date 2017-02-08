@@ -24,10 +24,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--LoginVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TOPSPOT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginVC" customModule="TOPSPOT" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -132,6 +132,9 @@
                                 <state key="normal" title="Sign up here">
                                     <color key="titleColor" red="1" green="0.69411764705882351" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Qsd-xk-sh2" kind="show" identifier="showSignUp" id="umD-Ez-NNJ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AoL-Pv-6Mo">
                                 <rect key="frame" x="214" y="353" width="119" height="34"/>
@@ -176,6 +179,150 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+        <!--Sign UpVC-->
+        <scene sceneID="0nh-rP-ck2">
+            <objects>
+                <viewController id="Qsd-xk-sh2" customClass="SignUpVC" customModule="TOPSPOT" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jhc-Jc-CQj"/>
+                        <viewControllerLayoutGuide type="bottom" id="W6b-6X-IQ6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="n44-P6-JHu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="topspot-logo" translatesAutoresizingMaskIntoConstraints="NO" id="8JT-hU-XP9">
+                                <rect key="frame" x="43" y="70" width="26" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="BE2-TX-4aN"/>
+                                    <constraint firstAttribute="width" constant="26" id="tFQ-4n-rkm"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOPSPOT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mBa-XO-WAW">
+                                <rect key="frame" x="77" y="73" width="112" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="112" id="PrB-hG-P8m"/>
+                                    <constraint firstAttribute="height" constant="21" id="tFy-w4-wIi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Archive" family="Archive" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Always remember this amazing restaurant" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="290" translatesAutoresizingMaskIntoConstraints="NO" id="sgi-qR-hHN">
+                                <rect key="frame" x="43" y="126" width="290" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="290" id="hxi-Uw-p4f"/>
+                                    <constraint firstAttribute="height" constant="60" id="xRK-hu-wdd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Exo-Light" family="Exo" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NAp-62-TJ4" customClass="CustomTextField" customModule="TOPSPOT" customModuleProvider="target">
+                                <rect key="frame" x="43" y="218" width="290" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="290" id="SNc-Al-zwr"/>
+                                    <constraint firstAttribute="height" constant="34" id="gVk-3R-fa2"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Exo-Light" family="Exo" pointSize="12"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BZN-0j-dfC" customClass="CustomTextField" customModule="TOPSPOT" customModuleProvider="target">
+                                <rect key="frame" x="43" y="283" width="290" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="290" id="4V2-od-MJC"/>
+                                    <constraint firstAttribute="height" constant="34" id="eQW-rm-PVK"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Exo-Light" family="Exo" pointSize="12"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X41-Hd-qGe" customClass="CustomTextField" customModule="TOPSPOT" customModuleProvider="target">
+                                <rect key="frame" x="43" y="348" width="290" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Fpl-vv-mbf"/>
+                                    <constraint firstAttribute="width" constant="290" id="J6r-rp-0eP"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Exo-Light" family="Exo" pointSize="12"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C3U-ED-hJn" customClass="CustomTextField" customModule="TOPSPOT" customModuleProvider="target">
+                                <rect key="frame" x="43" y="415" width="290" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Enr-hH-07k"/>
+                                    <constraint firstAttribute="width" constant="290" id="lAw-eq-9ps"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Exo-Light" family="Exo" pointSize="12"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AVz-vG-Lhx">
+                                <rect key="frame" x="43" y="509" width="175" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="175" id="Qiv-UE-nWy"/>
+                                    <constraint firstAttribute="height" constant="34" id="cf3-3t-7hf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Exo-Bold" family="Exo" pointSize="16"/>
+                                <state key="normal" title="Sign up now">
+                                    <color key="titleColor" red="1" green="0.69411764710000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jOi-hg-7Ic">
+                                <rect key="frame" x="43" y="581" width="146" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="7wT-ER-z8m"/>
+                                    <constraint firstAttribute="width" constant="146" id="KjC-qS-rW5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Exo-Medium" family="Exo" pointSize="12"/>
+                                <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sNo-90-WuE">
+                                <rect key="frame" x="185" y="581" width="153" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="153" id="WGT-NV-anT"/>
+                                    <constraint firstAttribute="height" constant="21" id="ati-aD-MeK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Exo-Medium" family="Exo" pointSize="12"/>
+                                <state key="normal" title="Log in here">
+                                    <color key="titleColor" red="1" green="0.69411764710000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="showLogIn" id="qe2-rv-rUM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sNo-90-WuE" firstAttribute="leading" secondItem="jOi-hg-7Ic" secondAttribute="trailing" constant="-4" id="1zK-ZI-FK3"/>
+                            <constraint firstItem="sNo-90-WuE" firstAttribute="top" secondItem="AVz-vG-Lhx" secondAttribute="bottom" constant="38" id="ABN-xk-afV"/>
+                            <constraint firstItem="BZN-0j-dfC" firstAttribute="leading" secondItem="n44-P6-JHu" secondAttribute="leadingMargin" constant="27" id="HQe-so-wId"/>
+                            <constraint firstItem="sgi-qR-hHN" firstAttribute="top" secondItem="8JT-hU-XP9" secondAttribute="bottom" constant="30" id="JPI-ly-lVI"/>
+                            <constraint firstItem="NAp-62-TJ4" firstAttribute="leading" secondItem="n44-P6-JHu" secondAttribute="leadingMargin" constant="27" id="ORD-z4-pK4"/>
+                            <constraint firstItem="jOi-hg-7Ic" firstAttribute="top" secondItem="AVz-vG-Lhx" secondAttribute="bottom" constant="38" id="Q5A-6B-vk1"/>
+                            <constraint firstItem="X41-Hd-qGe" firstAttribute="top" secondItem="BZN-0j-dfC" secondAttribute="bottom" constant="31" id="XN3-iP-8Rk"/>
+                            <constraint firstItem="C3U-ED-hJn" firstAttribute="top" secondItem="X41-Hd-qGe" secondAttribute="bottom" constant="33" id="YpK-uJ-Lse"/>
+                            <constraint firstItem="8JT-hU-XP9" firstAttribute="top" secondItem="jhc-Jc-CQj" secondAttribute="bottom" constant="50" id="e3a-fL-w6p"/>
+                            <constraint firstItem="8JT-hU-XP9" firstAttribute="leading" secondItem="n44-P6-JHu" secondAttribute="leadingMargin" constant="27" id="kqN-Gt-5uk"/>
+                            <constraint firstItem="AVz-vG-Lhx" firstAttribute="leading" secondItem="n44-P6-JHu" secondAttribute="leadingMargin" constant="27" id="mTs-Cn-MJ0"/>
+                            <constraint firstItem="jOi-hg-7Ic" firstAttribute="leading" secondItem="n44-P6-JHu" secondAttribute="leadingMargin" constant="27" id="mYq-MX-zov"/>
+                            <constraint firstItem="AVz-vG-Lhx" firstAttribute="top" secondItem="C3U-ED-hJn" secondAttribute="bottom" constant="60" id="nIq-Vi-el8"/>
+                            <constraint firstItem="C3U-ED-hJn" firstAttribute="leading" secondItem="n44-P6-JHu" secondAttribute="leadingMargin" constant="27" id="nwb-qb-fQf"/>
+                            <constraint firstItem="mBa-XO-WAW" firstAttribute="top" secondItem="jhc-Jc-CQj" secondAttribute="bottom" constant="53" id="oVH-By-6L7"/>
+                            <constraint firstItem="sgi-qR-hHN" firstAttribute="leading" secondItem="n44-P6-JHu" secondAttribute="leadingMargin" constant="27" id="pyT-xQ-Mb6"/>
+                            <constraint firstItem="mBa-XO-WAW" firstAttribute="leading" secondItem="8JT-hU-XP9" secondAttribute="trailing" constant="8" id="qDU-Ep-wMO"/>
+                            <constraint firstItem="BZN-0j-dfC" firstAttribute="top" secondItem="NAp-62-TJ4" secondAttribute="bottom" constant="31" id="sGO-lp-OEu"/>
+                            <constraint firstItem="NAp-62-TJ4" firstAttribute="top" secondItem="sgi-qR-hHN" secondAttribute="bottom" constant="32" id="xTt-hq-bFD"/>
+                            <constraint firstItem="X41-Hd-qGe" firstAttribute="leading" secondItem="n44-P6-JHu" secondAttribute="leadingMargin" constant="27" id="zer-wl-6eu"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oi3-cU-6jv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="864.79999999999995" y="138.98050974512745"/>
         </scene>
     </scenes>
     <resources>
