@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56553E52AE180281D8D2D0CE /* Pods_TOPSPOT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 006FEF5471750E7C88BF394F /* Pods_TOPSPOT.framework */; };
 		CE1F8DAF1E4B8FD800395C7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1F8DAE1E4B8FD800395C7C /* AppDelegate.swift */; };
 		CE1F8DB11E4B8FD800395C7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1F8DB01E4B8FD800395C7C /* ViewController.swift */; };
 		CE1F8DB41E4B8FD800395C7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1F8DB21E4B8FD800395C7C /* Main.storyboard */; };
 		CE1F8DB61E4B8FD800395C7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE1F8DB51E4B8FD800395C7C /* Assets.xcassets */; };
 		CE1F8DB91E4B8FD800395C7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1F8DB71E4B8FD800395C7C /* LaunchScreen.storyboard */; };
+		CE1F8DC11E4B934700395C7C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE1F8DC01E4B934700395C7C /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		006FEF5471750E7C88BF394F /* Pods_TOPSPOT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TOPSPOT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE1F8DAB1E4B8FD800395C7C /* TOPSPOT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TOPSPOT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE1F8DAE1E4B8FD800395C7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE1F8DB01E4B8FD800395C7C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,9 @@
 		CE1F8DB51E4B8FD800395C7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE1F8DB81E4B8FD800395C7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE1F8DBA1E4B8FD800395C7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE1F8DC01E4B934700395C7C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CEE9ED7F39D09BD411BC411A /* Pods-TOPSPOT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TOPSPOT.release.xcconfig"; path = "Pods/Target Support Files/Pods-TOPSPOT/Pods-TOPSPOT.release.xcconfig"; sourceTree = "<group>"; };
+		F326F43303835DC397ACBA2B /* Pods-TOPSPOT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TOPSPOT.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TOPSPOT/Pods-TOPSPOT.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56553E52AE180281D8D2D0CE /* Pods_TOPSPOT.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4AEB1AC9A857481306D5812E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				006FEF5471750E7C88BF394F /* Pods_TOPSPOT.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B71EA5E1741B62D4812574B7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F326F43303835DC397ACBA2B /* Pods-TOPSPOT.debug.xcconfig */,
+				CEE9ED7F39D09BD411BC411A /* Pods-TOPSPOT.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CE1F8DA21E4B8FD600395C7C = {
 			isa = PBXGroup;
 			children = (
 				CE1F8DAD1E4B8FD800395C7C /* TOPSPOT */,
 				CE1F8DAC1E4B8FD800395C7C /* Products */,
+				B71EA5E1741B62D4812574B7 /* Pods */,
+				4AEB1AC9A857481306D5812E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +80,39 @@
 		CE1F8DAD1E4B8FD800395C7C /* TOPSPOT */ = {
 			isa = PBXGroup;
 			children = (
+				CE1F8DC41E4B93F500395C7C /* Controller */,
+				CE1F8DC31E4B93EF00395C7C /* View */,
+				CE1F8DC21E4B93E900395C7C /* Model */,
 				CE1F8DAE1E4B8FD800395C7C /* AppDelegate.swift */,
 				CE1F8DB01E4B8FD800395C7C /* ViewController.swift */,
 				CE1F8DB21E4B8FD800395C7C /* Main.storyboard */,
 				CE1F8DB51E4B8FD800395C7C /* Assets.xcassets */,
 				CE1F8DB71E4B8FD800395C7C /* LaunchScreen.storyboard */,
 				CE1F8DBA1E4B8FD800395C7C /* Info.plist */,
+				CE1F8DC01E4B934700395C7C /* GoogleService-Info.plist */,
 			);
 			path = TOPSPOT;
+			sourceTree = "<group>";
+		};
+		CE1F8DC21E4B93E900395C7C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		CE1F8DC31E4B93EF00395C7C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		CE1F8DC41E4B93F500395C7C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +122,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE1F8DBD1E4B8FD800395C7C /* Build configuration list for PBXNativeTarget "TOPSPOT" */;
 			buildPhases = (
+				139E84C72367EA088F2EE865 /* [CP] Check Pods Manifest.lock */,
 				CE1F8DA71E4B8FD600395C7C /* Sources */,
 				CE1F8DA81E4B8FD600395C7C /* Frameworks */,
 				CE1F8DA91E4B8FD600395C7C /* Resources */,
+				E22BA1B53B901B3870EC8C84 /* [CP] Embed Pods Frameworks */,
+				F588A080660829754B213131 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -124,12 +178,61 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE1F8DB91E4B8FD800395C7C /* LaunchScreen.storyboard in Resources */,
+				CE1F8DC11E4B934700395C7C /* GoogleService-Info.plist in Resources */,
 				CE1F8DB61E4B8FD800395C7C /* Assets.xcassets in Resources */,
 				CE1F8DB41E4B8FD800395C7C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		139E84C72367EA088F2EE865 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E22BA1B53B901B3870EC8C84 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TOPSPOT/Pods-TOPSPOT-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F588A080660829754B213131 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TOPSPOT/Pods-TOPSPOT-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CE1F8DA71E4B8FD600395C7C /* Sources */ = {
@@ -258,6 +361,7 @@
 		};
 		CE1F8DBE1E4B8FD800395C7C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F326F43303835DC397ACBA2B /* Pods-TOPSPOT.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TOPSPOT/Info.plist;
@@ -270,6 +374,7 @@
 		};
 		CE1F8DBF1E4B8FD800395C7C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEE9ED7F39D09BD411BC411A /* Pods-TOPSPOT.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TOPSPOT/Info.plist;
@@ -299,6 +404,7 @@
 				CE1F8DBF1E4B8FD800395C7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
