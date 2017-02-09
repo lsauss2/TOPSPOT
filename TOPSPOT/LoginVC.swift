@@ -19,10 +19,11 @@ class LoginVC: UIViewController {
     
     @IBOutlet var forgotPasswordButton: UIButton!
     
+    let transitionManager = TransitionManager()
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -94,7 +95,14 @@ class LoginVC: UIViewController {
         print("User added to the Database")
         performSegue(withIdentifier: "loginUser", sender: self)
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // this gets a reference to the screen that we're about to transition to
+        let toViewController = segue.destination as UIViewController
+        
+        // instead of using the default transition animation, we'll ask
+        // the segue to use our custom TransitionManager object to manage the transition animation
+        toViewController.transitioningDelegate = self.transitionManager
+    }
 
 }
-

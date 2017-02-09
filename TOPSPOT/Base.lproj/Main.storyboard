@@ -24,10 +24,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--LoginVC-->
+        <!--Login-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginVC" customModule="TOPSPOT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Login" id="BYZ-38-t0r" customClass="LoginVC" customModule="TOPSPOT" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -139,7 +139,7 @@
                                     <color key="titleColor" red="1" green="0.69411764705882351" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Qsd-xk-sh2" kind="show" identifier="showSignUp" id="umD-Ez-NNJ"/>
+                                    <segue destination="Qsd-xk-sh2" kind="presentation" identifier="showSignUp" id="umD-Ez-NNJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AoL-Pv-6Mo">
@@ -192,10 +192,10 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
-        <!--Sign UpVC-->
+        <!--SignUp-->
         <scene sceneID="0nh-rP-ck2">
             <objects>
-                <viewController id="Qsd-xk-sh2" customClass="SignUpVC" customModule="TOPSPOT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="SignUp" id="Qsd-xk-sh2" customClass="SignUpVC" customModule="TOPSPOT" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jhc-Jc-CQj"/>
                         <viewControllerLayoutGuide type="bottom" id="W6b-6X-IQ6"/>
@@ -387,6 +387,6 @@
         <image name="topspot-logo" width="27" height="27"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="QH7-FO-dOx"/>
+        <segue reference="TAD-9m-zAL"/>
     </inferredMetricsTieBreakers>
 </document>
