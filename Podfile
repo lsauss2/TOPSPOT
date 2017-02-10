@@ -9,6 +9,7 @@ target 'TOPSPOT' do
   pod 'FacebookCore'
   pod 'FacebookLogin'
   pod 'FacebookShare'
+  pod 'Alamofire', '~> 4.3'
   use_frameworks!
 
   # Pods for TOPSPOT

@@ -346,10 +346,10 @@
             </objects>
             <point key="canvasLocation" x="864.79999999999995" y="138.98050974512745"/>
         </scene>
-        <!--Discover ListVC-->
+        <!--DiscoverList-->
         <scene sceneID="NX3-et-dd1">
             <objects>
-                <viewController id="J0Q-oP-Uxb" customClass="DiscoverListVC" customModule="TOPSPOT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="DiscoverList" id="J0Q-oP-Uxb" customClass="DiscoverListVC" customModule="TOPSPOT" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="us8-JU-OE7"/>
                         <viewControllerLayoutGuide type="bottom" id="B6O-fc-rMm"/>

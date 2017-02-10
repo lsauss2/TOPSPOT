@@ -10,17 +10,20 @@ import UIKit
 
 class TransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UIViewControllerTransitioningDelegate {
     
+    private var preseting = true
+    
     // return how many seconds the transiton animation will take
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return 1.5
+        return 1
     }
     
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        self.preseting = true
         return self
     }
     
-    // return the animator used when dismissing from a viewcontroller
-    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning! {
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        self.preseting = false
         return self
     }
     
@@ -43,7 +46,7 @@ class TransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UIView
         case "Login":
             toView.transform = offScreenLeft
             whereTo = offScreenRight
-        case "SignUp" :
+        case "SignUp", "DiscoverList" :
             toView.transform = offScreenRight
             whereTo = offScreenLeft
         default:

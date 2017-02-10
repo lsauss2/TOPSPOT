@@ -10,6 +10,8 @@ import UIKit
 import Firebase
 
 class DiscoverListVC: UIViewController {
+    
+    let transitionManager = TransitionManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,5 +29,13 @@ class DiscoverListVC: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // this gets a reference to the screen that we're about to transition to
+        let toViewController = segue.destination as UIViewController
+        
+        // instead of using the default transition animation, we'll ask
+        // the segue to use our custom TransitionManager object to manage the transition animation
+        toViewController.transitioningDelegate = self.transitionManager
+    }
 
 }
