@@ -10,6 +10,7 @@ target 'TOPSPOT' do
   pod 'FacebookLogin'
   pod 'FacebookShare'
   pod 'Alamofire', '~> 4.3'
+  pod 'SwiftKeychainWrapper'
   use_frameworks!
 
   # Pods for TOPSPOT

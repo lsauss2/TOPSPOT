@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import SwiftKeychainWrapper
 
 class DiscoverListVC: UIViewController {
     
@@ -25,6 +26,7 @@ class DiscoverListVC: UIViewController {
     }
     
     @IBAction func logOutUser(_ sender: Any) {
+        let keychainresult = KeychainWrapper.standard.remove(key: KEY_UID)
         try! FIRAuth.auth()?.signOut()
         dismiss(animated: true, completion: nil)
     }

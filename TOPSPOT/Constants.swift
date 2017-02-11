@@ -8,6 +8,8 @@
 
 import Foundation
 
+let KEY_UID = "uid"
+
 let api_key = "AIzaSyDDzFcsajCTfbIGYMCZwKKGu8y1IPk9GyE"
 let base_nearby_search_url:String = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?"
 let base_text_search_url:String = "https://maps.googleapis.com/maps/api/place/textsearch/json?"

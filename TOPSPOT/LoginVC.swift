@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import FBSDKCoreKit
 import FBSDKLoginKit
+import SwiftKeychainWrapper
 
 class LoginVC: UIViewController {
     
@@ -26,6 +27,14 @@ class LoginVC: UIViewController {
         
         // Do any additional setup after loading the view, typically from a nib.
 
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        if let _ = KeychainWrapper.standard.string(forKey: KEY_UID) {
+            performSegue(withIdentifier: "loginUser", sender: self)
+        }
         
     }
     
@@ -89,6 +98,7 @@ class LoginVC: UIViewController {
     
     func completeSignIn(id: String, userData: Dictionary<String, String>) {
         DataService.ds.createFirebaseDBUser(uid: id, userData: userData)
+        KeychainWrapper.standard.set(id, forKey: KEY_UID)
         print("User added to the Database")
         performSegue(withIdentifier: "loginUser", sender: self)
     }
