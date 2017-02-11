@@ -9,20 +9,146 @@
 import UIKit
 import Firebase
 import SwiftKeychainWrapper
+import Alamofire
 
-class DiscoverListVC: UIViewController {
+class DiscoverListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet var tableCell: UITableView!
+    
     
     let transitionManager = TransitionManager()
+    var places = [Place]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        tableCell.delegate = self
+        tableCell.dataSource = self
+        
+        downloadPlaces {
+            
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return places.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "placeCell", for: indexPath) as? placeCell {
+            
+            let place = places[indexPath.row]
+            
+            cell.configureCell(place: place)
+            
+            return cell
+            
+        } else {
+            return placeCell()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 130
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let selectedPlace = places[indexPath.row]
+        
+        print(selectedPlace.placeName)
+        
+        performSegue(withIdentifier: "showPlace", sender: selectedPlace)
+        
+    }
+    
+    func downloadPlaces(completed: @escaping DownloadComplete) {
+        
+        let forecastUrl = URL(string: test_url)
+        Alamofire.request(forecastUrl!).responseJSON {response in
+            
+            let result = response.result
+            if let dict = result.value as? Dictionary<String, AnyObject> {
+                
+                if let placesResult = dict["results"] as? [Dictionary<String, AnyObject>] {
+                    
+                    for obj in placesResult {
+                        
+                        var name = ""
+                        var address = ""
+                        var mainPhotoReference = ""
+                        var placeId = ""
+                        var rating:Double = 0.0
+                        var lat:Float = 0.0
+                        var lon:Float = 0.0
+                        
+                        if let placeName = obj["name"] as? String {
+                            name = placeName
+                        }
+                        
+                        if let placeAddress = obj["vicinity"] as? String {
+                            address = placeAddress
+                        }
+                        
+                        if let photoReference = obj["photos"] as? [Dictionary<String, AnyObject>] {
+                            
+                            if let finalPhotoRef = photoReference[0]["photo_reference"] as? String {
+                                
+                                mainPhotoReference = finalPhotoRef
+                                
+                            }
+                            
+                        }
+                        
+                        if let finalPlaceId = obj["place_id"] as? String {
+                            placeId = finalPlaceId
+                        }
+                        
+                        if let placeRating = obj["rating"] as? Double {
+                            rating = placeRating
+                        }
+                        
+                        if let placeGeometry = obj["geometry"] as? Dictionary<String, AnyObject> {
+                            
+                            if let placeLocation = placeGeometry["location"] as? Dictionary<String, Float> {
+                                
+                                if let placeLatitude = placeLocation["lat"] {
+                                    lat = placeLatitude
+                                }
+                                
+                                if let placeLongitude = placeLocation["lng"] {
+                                    lon = placeLongitude
+                                }
+                                
+                            }
+                            
+                        }
+                        
+                        
+                        
+                        let place = Place(name: name, address: address, reference: mainPhotoReference, place_id: placeId, rating: rating, lat: lat, long: lon)
+                        
+                        
+                        self.places.append(place)
+                        
+                    }
+                    
+                    self.tableCell.reloadData()
+                    
+                }
+                
+            }
+            
+            completed()
+            print("Data are loaded")
+        }
+        
     }
     
     @IBAction func logOutUser(_ sender: Any) {
@@ -32,12 +158,22 @@ class DiscoverListVC: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // this gets a reference to the screen that we're about to transition to
         let toViewController = segue.destination as UIViewController
-        
-        // instead of using the default transition animation, we'll ask
-        // the segue to use our custom TransitionManager object to manage the transition animation
         toViewController.transitioningDelegate = self.transitionManager
+        
+        if segue.identifier == "showPlace" {
+            
+            if let detailsVC = segue.destination as? PlaceViewVC {
+                
+                if let place = sender as? Place {
+                    
+                    detailsVC.place = place
+                    
+                }
+                
+            }
+            
+        }
     }
 
 }
