@@ -15,6 +15,8 @@ class CustomTabBar: UITabBar {
         
         self.barTintColor = UIColor.white
         self.shadowImage = UIImage()
+        self.backgroundImage = UIImage()
+        
     }
 
 }

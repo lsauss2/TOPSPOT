@@ -31,6 +31,9 @@ class BookmarksListVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         
         getUserPlacesLiked {
             self.getUserPlace {
@@ -38,9 +41,11 @@ class BookmarksListVC: UIViewController, UITableViewDelegate, UITableViewDataSou
                     self.emptyStateImage.isHidden = false
                     self.emptyStateLabel.isHidden = false
                     self.emptyStateButton.isHidden = false
+                    self.tableView.isHidden = true
                 }
             }
         }
+        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -82,6 +87,7 @@ class BookmarksListVC: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     func getUserPlace(completed: @escaping DownloadComplete){
         
+        places.removeAll()
         DataService.ds.REF_PLACES.observe(.value, with: { (snapshot) in
             
             if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
@@ -111,6 +117,7 @@ class BookmarksListVC: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     func getUserPlacesLiked(completed: @escaping DownloadComplete){
         
+        placesLiked.removeAll()
         DataService.ds.REF_USERS.child(user.userId).child("likes").observe(.value, with: { (snapshot) in
             
             if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
