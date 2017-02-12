@@ -42,6 +42,7 @@ class TransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UIView
         var whereTo = offScreenLeft
         let toVC = transitionContext.viewController(forKey: .to)
         let title = toVC!.title!
+        if self.preseting == true {
         switch title {
         case "Login":
             toView.transform = offScreenLeft
@@ -52,6 +53,19 @@ class TransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UIView
         default:
             toView.transform = offScreenRight
             whereTo = offScreenLeft
+        }
+        } else {
+            switch title {
+            case "Login":
+                toView.transform = offScreenLeft
+                whereTo = offScreenRight
+            case "DiscoverList" :
+                toView.transform = offScreenLeft
+                whereTo = offScreenRight
+            default:
+                toView.transform = offScreenRight
+                whereTo = offScreenLeft
+            }
         }
         
         // add the both views to our view controller

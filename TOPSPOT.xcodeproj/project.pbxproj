@@ -30,6 +30,13 @@
 		CE33992E1E4F503600188664 /* placeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33992D1E4F503600188664 /* placeCell.swift */; };
 		CE3399301E4F700E00188664 /* PlaceViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33992F1E4F700E00188664 /* PlaceViewVC.swift */; };
 		CE3399321E4F7B7C00188664 /* RoundedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3399311E4F7B7C00188664 /* RoundedImage.swift */; };
+		CE3399341E4FACEE00188664 /* ExoLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3399331E4FACEE00188664 /* ExoLabel.swift */; };
+		CE3399361E4FB1FA00188664 /* CircledImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3399351E4FB1FA00188664 /* CircledImage.swift */; };
+		CE3399381E4FB23A00188664 /* CircledView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3399371E4FB23A00188664 /* CircledView.swift */; };
+		CE33993A1E50465900188664 /* BookmarksListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3399391E50465900188664 /* BookmarksListVC.swift */; };
+		CE33993C1E5046FC00188664 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33993B1E5046FC00188664 /* ProfileVC.swift */; };
+		CE33993E1E504D1100188664 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33993D1E504D1100188664 /* User.swift */; };
+		CE3399401E50564200188664 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33993F1E50564200188664 /* SettingsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +65,13 @@
 		CE33992D1E4F503600188664 /* placeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = placeCell.swift; sourceTree = "<group>"; };
 		CE33992F1E4F700E00188664 /* PlaceViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceViewVC.swift; sourceTree = "<group>"; };
 		CE3399311E4F7B7C00188664 /* RoundedImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedImage.swift; sourceTree = "<group>"; };
+		CE3399331E4FACEE00188664 /* ExoLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExoLabel.swift; sourceTree = "<group>"; };
+		CE3399351E4FB1FA00188664 /* CircledImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircledImage.swift; sourceTree = "<group>"; };
+		CE3399371E4FB23A00188664 /* CircledView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircledView.swift; sourceTree = "<group>"; };
+		CE3399391E50465900188664 /* BookmarksListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarksListVC.swift; sourceTree = "<group>"; };
+		CE33993B1E5046FC00188664 /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		CE33993D1E504D1100188664 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CE33993F1E50564200188664 /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		CEE9ED7F39D09BD411BC411A /* Pods-TOPSPOT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TOPSPOT.release.xcconfig"; path = "Pods/Target Support Files/Pods-TOPSPOT/Pods-TOPSPOT.release.xcconfig"; sourceTree = "<group>"; };
 		F326F43303835DC397ACBA2B /* Pods-TOPSPOT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TOPSPOT.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TOPSPOT/Pods-TOPSPOT.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				CE33992B1E4F489C00188664 /* Place.swift */,
+				CE33993D1E504D1100188664 /* User.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -141,6 +156,9 @@
 				CE1F8DCC1E4B997700395C7C /* CustomTextField.swift */,
 				CE33992D1E4F503600188664 /* placeCell.swift */,
 				CE3399311E4F7B7C00188664 /* RoundedImage.swift */,
+				CE3399331E4FACEE00188664 /* ExoLabel.swift */,
+				CE3399351E4FB1FA00188664 /* CircledImage.swift */,
+				CE3399371E4FB23A00188664 /* CircledView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -153,6 +171,9 @@
 				CE1F8DD61E4BAEA100395C7C /* DiscoverListVC.swift */,
 				CE3399271E4CEFEB00188664 /* TransitionManager.swift */,
 				CE33992F1E4F700E00188664 /* PlaceViewVC.swift */,
+				CE3399391E50465900188664 /* BookmarksListVC.swift */,
+				CE33993B1E5046FC00188664 /* ProfileVC.swift */,
+				CE33993F1E50564200188664 /* SettingsVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -309,17 +330,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE3399401E50564200188664 /* SettingsVC.swift in Sources */,
 				CE1F8DD51E4B9F6800395C7C /* SignUpVC.swift in Sources */,
 				CE1F8DB11E4B8FD800395C7C /* LoginVC.swift in Sources */,
 				CE3399281E4CEFEB00188664 /* TransitionManager.swift in Sources */,
 				CE3399301E4F700E00188664 /* PlaceViewVC.swift in Sources */,
+				CE3399341E4FACEE00188664 /* ExoLabel.swift in Sources */,
 				CE1F8DD71E4BAEA100395C7C /* DiscoverListVC.swift in Sources */,
 				CE1F8DDA1E4BB05C00395C7C /* DataService.swift in Sources */,
 				CE1F8DAF1E4B8FD800395C7C /* AppDelegate.swift in Sources */,
+				CE3399381E4FB23A00188664 /* CircledView.swift in Sources */,
+				CE3399361E4FB1FA00188664 /* CircledImage.swift in Sources */,
 				CE33992C1E4F489C00188664 /* Place.swift in Sources */,
 				CE1F8DCD1E4B997700395C7C /* CustomTextField.swift in Sources */,
 				CE3399321E4F7B7C00188664 /* RoundedImage.swift in Sources */,
+				CE33993C1E5046FC00188664 /* ProfileVC.swift in Sources */,
+				CE33993E1E504D1100188664 /* User.swift in Sources */,
 				CE33992A1E4D964500188664 /* Constants.swift in Sources */,
+				CE33993A1E50465900188664 /* BookmarksListVC.swift in Sources */,
 				CE33992E1E4F503600188664 /* placeCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,5 @@
 //
-//  RoundedImage.swift
+//  CircledImage.swift
 //  TOPSPOT
 //
 //  Created by Ludo on 11/02/2017.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RoundedImage: UIImageView {
+class CircledImage: UIImageView {
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -17,8 +17,8 @@ class RoundedImage: UIImageView {
     override func layoutSubviews() {
         
         self.clipsToBounds = true
-        layer.cornerRadius = 5
+        layer.cornerRadius = self.frame.size.height / 2
         
     }
-    
+
 }
