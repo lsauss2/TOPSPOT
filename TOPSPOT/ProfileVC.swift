@@ -25,7 +25,8 @@ class ProfileVC: UIViewController {
         
         var currentUser = FIRAuth.auth()?.currentUser
         let uid = currentUser?.uid
-        user = User(id: uid!)
+        let email = currentUser?.email
+        user = User(id: uid!, email: email!)
         user.getUserDetails{
             self.updateUI()
         }

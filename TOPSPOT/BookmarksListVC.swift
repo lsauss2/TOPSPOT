@@ -10,6 +10,11 @@ import UIKit
 import Firebase
 
 class BookmarksListVC: UIViewController {
+    
+    @IBOutlet var emptyStateImage: UIImageView!
+    
+    @IBOutlet var emptyStateLabel: UILabel!
+    @IBOutlet var emptyStateButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +26,13 @@ class BookmarksListVC: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func startDiscoveringTapped(_ sender: Any) {
+        
+        self.tabBarController?.selectedIndex =  0
+        
+    }
+    
     
 
 }

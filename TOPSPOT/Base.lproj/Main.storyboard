@@ -384,7 +384,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hMX-3g-VSB">
-                                <rect key="frame" x="0.0" y="128" width="375" height="490"/>
+                                <rect key="frame" x="0.0" y="128" width="375" height="539"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="placeCell" rowHeight="130" id="kkD-A6-D8u" customClass="placeCell" customModule="TOPSPOT" customModuleProvider="target">
@@ -545,14 +545,56 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty-places-icon" translatesAutoresizingMaskIntoConstraints="NO" id="z9F-7j-wCC">
+                                <rect key="frame" x="138" y="257" width="102" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="102" id="67I-qz-COk"/>
+                                    <constraint firstAttribute="height" constant="68" id="hgH-ps-hVt"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRD-g3-8uh">
+                                <rect key="frame" x="42" y="389" width="290" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="290" id="GlK-Wy-Z2b"/>
+                                    <constraint firstAttribute="height" constant="21" id="GlR-xv-pO1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Exo-Bold" family="Exo" pointSize="16"/>
+                                <state key="normal" title="Start discovering places">
+                                    <color key="titleColor" red="1" green="0.69411764705882351" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startDiscoveringTapped:" destination="J7C-iR-jf9" eventType="touchUpInside" id="4rQ-uu-2do"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No bookmarks added yet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ix-SX-6lc">
+                                <rect key="frame" x="43" y="345" width="290" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="Jv8-sN-XGb"/>
+                                    <constraint firstAttribute="width" constant="290" id="beh-Wd-tVr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Exo-Light" family="Exo" pointSize="18"/>
+                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="9Ix-SX-6lc" firstAttribute="leading" secondItem="GMT-Ay-wh4" secondAttribute="leadingMargin" constant="27" id="00v-d3-w8g"/>
                             <constraint firstItem="2m4-nx-lG4" firstAttribute="leading" secondItem="GMT-Ay-wh4" secondAttribute="leadingMargin" constant="14" id="HXE-zF-9uT"/>
+                            <constraint firstItem="9Ix-SX-6lc" firstAttribute="top" secondItem="z9F-7j-wCC" secondAttribute="bottom" constant="20" id="Jnn-zw-ldW"/>
+                            <constraint firstItem="z9F-7j-wCC" firstAttribute="leading" secondItem="GMT-Ay-wh4" secondAttribute="leadingMargin" constant="122" id="UrX-HY-tPp"/>
+                            <constraint firstItem="z9F-7j-wCC" firstAttribute="top" secondItem="xj6-BG-g1h" secondAttribute="bottom" constant="237" id="gHf-f7-Ejp"/>
+                            <constraint firstItem="RRD-g3-8uh" firstAttribute="leading" secondItem="GMT-Ay-wh4" secondAttribute="leadingMargin" constant="26" id="nWh-ce-YO0"/>
                             <constraint firstItem="2m4-nx-lG4" firstAttribute="top" secondItem="xj6-BG-g1h" secondAttribute="bottom" constant="22" id="wa6-7P-Wt2"/>
+                            <constraint firstItem="RRD-g3-8uh" firstAttribute="top" secondItem="9Ix-SX-6lc" secondAttribute="bottom" constant="20" id="ywB-ex-fY2"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Bookmarks" id="ofc-VP-FfM"/>
+                    <connections>
+                        <outlet property="emptyStateButton" destination="RRD-g3-8uh" id="9fg-Bw-1w9"/>
+                        <outlet property="emptyStateImage" destination="z9F-7j-wCC" id="X3o-mx-MeC"/>
+                        <outlet property="emptyStateLabel" destination="9Ix-SX-6lc" id="Ndc-LF-CxF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fzR-y2-rvD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -832,6 +874,13 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" id="gSG-Er-mSf"/>
+                    <connections>
+                        <outlet property="userEmailAddressField" destination="wlm-jr-XbX" id="06e-Zq-QnH"/>
+                        <outlet property="userImageButton" destination="UX4-7u-0xg" id="WLc-M1-4db"/>
+                        <outlet property="userImageHolder" destination="ELS-q0-epM" id="EGd-PX-66v"/>
+                        <outlet property="userLocationField" destination="Ojf-z4-eAv" id="4iv-ed-jJb"/>
+                        <outlet property="userNameField" destination="xiR-N6-HCQ" id="Ppy-z2-YXh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R5e-Tm-Grp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1150,6 +1199,7 @@
     <resources>
         <image name="back-icon" width="16" height="14"/>
         <image name="empty-image" width="306" height="306"/>
+        <image name="empty-places-icon" width="102" height="68"/>
         <image name="fb-icon" width="20" height="20"/>
         <image name="heart-filled-icon" width="15" height="14"/>
         <image name="matt" width="636" height="960"/>

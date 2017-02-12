@@ -48,8 +48,9 @@ class User {
         return _userImage
     }
     
-    init(id:String) {
+    init(id:String, email:String) {
         _userId = id
+        _userEmailAddress = email
     }
     
     func getUserDetails(completed: @escaping DownloadComplete){
