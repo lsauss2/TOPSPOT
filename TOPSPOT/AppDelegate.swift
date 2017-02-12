@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
         FIRApp.configure()
+        
         return true
     }
 

@@ -30,6 +30,7 @@ class DiscoverListVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         downloadPlaces {
             
         }
+        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

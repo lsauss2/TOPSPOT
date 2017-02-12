@@ -384,7 +384,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hMX-3g-VSB">
-                                <rect key="frame" x="0.0" y="128" width="375" height="539"/>
+                                <rect key="frame" x="0.0" y="128" width="375" height="490"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="placeCell" rowHeight="130" id="kkD-A6-D8u" customClass="placeCell" customModule="TOPSPOT" customModuleProvider="target">
@@ -493,7 +493,7 @@
                             <constraint firstItem="hMX-3g-VSB" firstAttribute="leading" secondItem="2cJ-b5-z09" secondAttribute="leading" id="yaw-yT-3Wy"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="DIscover" id="gZg-rJ-aWg"/>
+                    <tabBarItem key="tabBarItem" title="" image="discover-icon" id="gZg-rJ-aWg" customClass="CustomTabBarItem" customModule="TOPSPOT" customModuleProvider="target"/>
                     <connections>
                         <outlet property="tableCell" destination="hMX-3g-VSB" id="4zy-oB-gwK"/>
                         <segue destination="2o8-40-N3p" kind="show" identifier="showPlace" id="rxi-YM-gaq"/>
@@ -507,10 +507,12 @@
         <scene sceneID="k4i-92-Zwf">
             <objects>
                 <tabBarController title="TabBar" id="aEr-QB-63y" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="nPr-xH-wF3">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="nPr-xH-wF3" customClass="CustomTabBar" customModule="TOPSPOT" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="1" green="0.69411764705882351" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="1" green="0.69411764705882351" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="J0Q-oP-Uxb" kind="relationship" relationship="viewControllers" id="ECy-ET-BTp"/>
@@ -589,7 +591,7 @@
                             <constraint firstItem="RRD-g3-8uh" firstAttribute="top" secondItem="9Ix-SX-6lc" secondAttribute="bottom" constant="20" id="ywB-ex-fY2"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Bookmarks" id="ofc-VP-FfM"/>
+                    <tabBarItem key="tabBarItem" title="" image="bookmarks-icon" id="ofc-VP-FfM" customClass="CustomTabBarItem" customModule="TOPSPOT" customModuleProvider="target"/>
                     <connections>
                         <outlet property="emptyStateButton" destination="RRD-g3-8uh" id="9fg-Bw-1w9"/>
                         <outlet property="emptyStateImage" destination="z9F-7j-wCC" id="X3o-mx-MeC"/>
@@ -737,7 +739,7 @@
                             <constraint firstItem="6Uf-4n-PPV" firstAttribute="top" secondItem="XUm-oy-hji" secondAttribute="bottom" constant="21" id="zep-zq-fcC"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" id="KWr-yD-3sJ"/>
+                    <tabBarItem key="tabBarItem" title="" image="user-icon" id="KWr-yD-3sJ" customClass="CustomTabBarItem" customModule="TOPSPOT" customModuleProvider="target"/>
                     <connections>
                         <outlet property="mainUsername" destination="XUm-oy-hji" id="5Or-99-UlR"/>
                         <outlet property="userDescriptionLabel" destination="6jJ-VF-72F" id="h8j-xz-sGm"/>
@@ -873,7 +875,7 @@
                             <constraint firstItem="fXN-ua-GVQ" firstAttribute="leading" secondItem="lyH-ty-Yr5" secondAttribute="trailing" constant="19" id="usN-x3-6Va"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" id="gSG-Er-mSf"/>
+                    <tabBarItem key="tabBarItem" title="" image="settings-icon" id="gSG-Er-mSf" customClass="CustomTabBarItem" customModule="TOPSPOT" customModuleProvider="target"/>
                     <connections>
                         <outlet property="userEmailAddressField" destination="wlm-jr-XbX" id="06e-Zq-QnH"/>
                         <outlet property="userImageButton" destination="UX4-7u-0xg" id="WLc-M1-4db"/>
@@ -1198,6 +1200,8 @@
     </scenes>
     <resources>
         <image name="back-icon" width="16" height="14"/>
+        <image name="bookmarks-icon" width="16" height="20"/>
+        <image name="discover-icon" width="20" height="20"/>
         <image name="empty-image" width="306" height="306"/>
         <image name="empty-places-icon" width="102" height="68"/>
         <image name="fb-icon" width="20" height="20"/>
@@ -1205,10 +1209,12 @@
         <image name="matt" width="636" height="960"/>
         <image name="review-icon" width="12" height="12"/>
         <image name="sarah" width="960" height="960"/>
+        <image name="settings-icon" width="20" height="20"/>
         <image name="topspot-logo" width="27" height="27"/>
+        <image name="user-icon" width="20" height="20"/>
         <image name="vince" width="960" height="960"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="TAD-9m-zAL"/>
+        <segue reference="ECy-ET-BTp"/>
     </inferredMetricsTieBreakers>
 </document>
