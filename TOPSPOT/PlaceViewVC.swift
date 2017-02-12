@@ -13,7 +13,6 @@ import Alamofire
 class PlaceViewVC: UIViewController {
     
     @IBOutlet var mainTitle: ExoLabel!
-    @IBOutlet var heartButton: UIImageView!
     @IBOutlet var mainImage: UIImageView!
     @IBOutlet var placeName: UILabel!
     @IBOutlet var placeAddress: UILabel!
@@ -21,8 +20,10 @@ class PlaceViewVC: UIViewController {
     @IBOutlet var mapImage: UIImageView!
     @IBOutlet var placeRating: UILabel!
     @IBOutlet var placeReviewNumber: UILabel!
+    @IBOutlet var likeButton: UIButton!
     
     var place: Place!
+    var user: User!
 
     
     override func viewDidLoad() {
@@ -33,6 +34,10 @@ class PlaceViewVC: UIViewController {
             self.setRating()
         }
         
+        var currentUser = FIRAuth.auth()?.currentUser
+        let uid = currentUser?.uid
+        let email = currentUser?.email
+        user = User(id: uid!, email: email!)
     }
     
     @IBAction func backButtonPressed(_ sender: Any) {
@@ -46,9 +51,9 @@ class PlaceViewVC: UIViewController {
         let difrounded = 5 - roundedRating
         
         var offset = 0
-        for index in 1...roundedRating {
+        for _ in 1...roundedRating {
             
-            var xposition = 30 + offset
+            let xposition = 30 + offset
             let filledStar = UIImageView(frame: CGRect(x: xposition, y: 371, width: 15, height: 15))
             filledStar.image = UIImage(named: "star-filled-icon")
             self.view.addSubview(filledStar)
@@ -58,8 +63,8 @@ class PlaceViewVC: UIViewController {
         
         if difrounded != 0 {
             
-            for index in 1...difrounded {
-                var newxposition = 30 + offset
+            for _ in 1...difrounded {
+                let newxposition = 30 + offset
                 let unfilledStar = UIImageView(frame: CGRect(x: newxposition, y: 371, width: 15, height: 15))
                 unfilledStar.image = UIImage(named: "star-empty-icon")
                 self.view.addSubview(unfilledStar)
@@ -81,7 +86,7 @@ class PlaceViewVC: UIViewController {
         placeRating.text = "\(place.placeRating)"
         placeReviewNumber.text = "\(place.placeReviews.count) Reviews"
         let mainReview = place.placeReviews[0]["text"]
-        placeDescription.text = mainReview as! String
+        placeDescription.text = mainReview as? String
         
         let placePhotoReference = place.placePhotoReference
         let photoUrl = "\(base_photos_url)key=\(api_key)&photoreference=\(placePhotoReference)&maxwidth=400"
@@ -111,7 +116,44 @@ class PlaceViewVC: UIViewController {
             
         }
         
+        DataService.ds.REF_USERS.child(user.userId).child("likes").observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            if snapshot.hasChild(self.place.placeId){
+                
+                self.likeButton.setImage(UIImage(named: "heart-filled-icon"), for: .normal)
+                
+            }else{
+                
+                self.likeButton.setImage(UIImage(named: "heart-empty-icon"), for: .normal)
+            }
+            
+        })
+        
         
     }
+    
+    @IBAction func likeButtonTapped(_ sender: Any) {
+        
+        let placeDict:Dictionary<String, Any> = ["id": place.placeId, "name": place.placeName, "rating": place.placeRating, "address": place.placeAddress, "photo_reference": place.placePhotoReference]
+        
+        DataService.ds.createPlaceDBReference(id: place.placeId, placeData: placeDict)
+        
+        DataService.ds.REF_USERS.child(user.userId).child("likes").observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            if snapshot.hasChild(self.place.placeId){
+                
+                self.user.likePlace(userId: self.user.userId, placeId: self.place.placeId, type: "remove")
+                self.likeButton.setImage(UIImage(named: "heart-empty-icon"), for: .normal)
+                
+            }else{
+                
+                self.user.likePlace(userId: self.user.userId, placeId: self.place.placeId, type: "add")
+                self.likeButton.setImage(UIImage(named: "heart-filled-icon"), for: .normal)
+            }
+            
+        })
+        
+    }
+    
 
 }

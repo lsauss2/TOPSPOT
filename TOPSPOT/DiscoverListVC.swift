@@ -62,9 +62,6 @@ class DiscoverListVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let selectedPlace = places[indexPath.row]
-        
-        print(selectedPlace.placeName)
-        
         performSegue(withIdentifier: "showPlace", sender: selectedPlace)
         
     }
@@ -147,7 +144,6 @@ class DiscoverListVC: UIViewController, UITableViewDelegate, UITableViewDataSour
             }
             
             completed()
-            print("Data are loaded")
         }
         
     }

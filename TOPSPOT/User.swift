@@ -74,4 +74,14 @@ class User {
         })
     }
     
+    func likePlace(userId:String, placeId: String, type: String) {
+        
+        if type == "add" {
+        DataService.ds.REF_USERS.child(userId).child("likes").child(placeId).setValue(true)
+        } else {
+        DataService.ds.REF_USERS.child(userId).child("likes").child(placeId).removeValue()
+        }
+        
+    }
+    
 }
