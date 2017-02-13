@@ -40,6 +40,7 @@ class placeCell: UITableViewCell {
         let difrounded = 5 - roundedRating
         
         var offset = 0
+        if roundedRating > 0 {
         for index in 1...roundedRating {
             
             var xposition = 200 + offset
@@ -60,6 +61,7 @@ class placeCell: UITableViewCell {
                 offset += 18
             }
             
+        }
         }
         
     }

@@ -39,6 +39,11 @@
 		CE3399401E50564200188664 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33993F1E50564200188664 /* SettingsVC.swift */; };
 		CE872C231E50663B00D7BF4D /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE872C221E50663B00D7BF4D /* CustomTabBar.swift */; };
 		CE872C251E50671700D7BF4D /* CustomTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE872C241E50671700D7BF4D /* CustomTabBarItem.swift */; };
+		CEDA805E1E5227CA0083352A /* AddPlaceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA805D1E5227CA0083352A /* AddPlaceVC.swift */; };
+		CEDA80601E522B410083352A /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA805F1E522B410083352A /* TabBarController.swift */; };
+		CEDA80621E5230460083352A /* searchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA80611E5230460083352A /* searchCell.swift */; };
+		CEDA80641E52310E0083352A /* PlaceLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA80631E52310E0083352A /* PlaceLight.swift */; };
+		CEDA80661E52382F0083352A /* PlacePreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA80651E52382F0083352A /* PlacePreviewVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +81,11 @@
 		CE33993F1E50564200188664 /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		CE872C221E50663B00D7BF4D /* CustomTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		CE872C241E50671700D7BF4D /* CustomTabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarItem.swift; sourceTree = "<group>"; };
+		CEDA805D1E5227CA0083352A /* AddPlaceVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPlaceVC.swift; sourceTree = "<group>"; };
+		CEDA805F1E522B410083352A /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		CEDA80611E5230460083352A /* searchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = searchCell.swift; sourceTree = "<group>"; };
+		CEDA80631E52310E0083352A /* PlaceLight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceLight.swift; sourceTree = "<group>"; };
+		CEDA80651E52382F0083352A /* PlacePreviewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacePreviewVC.swift; sourceTree = "<group>"; };
 		CEE9ED7F39D09BD411BC411A /* Pods-TOPSPOT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TOPSPOT.release.xcconfig"; path = "Pods/Target Support Files/Pods-TOPSPOT/Pods-TOPSPOT.release.xcconfig"; sourceTree = "<group>"; };
 		F326F43303835DC397ACBA2B /* Pods-TOPSPOT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TOPSPOT.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TOPSPOT/Pods-TOPSPOT.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -150,6 +160,7 @@
 			children = (
 				CE33992B1E4F489C00188664 /* Place.swift */,
 				CE33993D1E504D1100188664 /* User.swift */,
+				CEDA80631E52310E0083352A /* PlaceLight.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -165,6 +176,7 @@
 				CE3399371E4FB23A00188664 /* CircledView.swift */,
 				CE872C221E50663B00D7BF4D /* CustomTabBar.swift */,
 				CE872C241E50671700D7BF4D /* CustomTabBarItem.swift */,
+				CEDA80611E5230460083352A /* searchCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -180,6 +192,9 @@
 				CE3399391E50465900188664 /* BookmarksListVC.swift */,
 				CE33993B1E5046FC00188664 /* ProfileVC.swift */,
 				CE33993F1E50564200188664 /* SettingsVC.swift */,
+				CEDA805D1E5227CA0083352A /* AddPlaceVC.swift */,
+				CEDA805F1E522B410083352A /* TabBarController.swift */,
+				CEDA80651E52382F0083352A /* PlacePreviewVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -341,21 +356,26 @@
 				CE1F8DB11E4B8FD800395C7C /* LoginVC.swift in Sources */,
 				CE3399281E4CEFEB00188664 /* TransitionManager.swift in Sources */,
 				CE3399301E4F700E00188664 /* PlaceViewVC.swift in Sources */,
+				CEDA80601E522B410083352A /* TabBarController.swift in Sources */,
 				CE3399341E4FACEE00188664 /* ExoLabel.swift in Sources */,
+				CEDA80661E52382F0083352A /* PlacePreviewVC.swift in Sources */,
 				CE1F8DD71E4BAEA100395C7C /* DiscoverListVC.swift in Sources */,
 				CE1F8DDA1E4BB05C00395C7C /* DataService.swift in Sources */,
 				CE1F8DAF1E4B8FD800395C7C /* AppDelegate.swift in Sources */,
 				CE3399381E4FB23A00188664 /* CircledView.swift in Sources */,
+				CEDA805E1E5227CA0083352A /* AddPlaceVC.swift in Sources */,
 				CE3399361E4FB1FA00188664 /* CircledImage.swift in Sources */,
 				CE33992C1E4F489C00188664 /* Place.swift in Sources */,
 				CE1F8DCD1E4B997700395C7C /* CustomTextField.swift in Sources */,
 				CE3399321E4F7B7C00188664 /* RoundedImage.swift in Sources */,
 				CE33993C1E5046FC00188664 /* ProfileVC.swift in Sources */,
+				CEDA80621E5230460083352A /* searchCell.swift in Sources */,
 				CE33993E1E504D1100188664 /* User.swift in Sources */,
 				CE872C251E50671700D7BF4D /* CustomTabBarItem.swift in Sources */,
 				CE872C231E50663B00D7BF4D /* CustomTabBar.swift in Sources */,
 				CE33992A1E4D964500188664 /* Constants.swift in Sources */,
 				CE33993A1E50465900188664 /* BookmarksListVC.swift in Sources */,
+				CEDA80641E52310E0083352A /* PlaceLight.swift in Sources */,
 				CE33992E1E4F503600188664 /* placeCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

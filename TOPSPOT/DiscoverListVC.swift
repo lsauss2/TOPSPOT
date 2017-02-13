@@ -14,6 +14,7 @@ import Alamofire
 class DiscoverListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var tableCell: UITableView!
+    @IBOutlet var customTabBarItem: CustomTabBarItem!
     
     
     let transitionManager = TransitionManager()
@@ -26,6 +27,8 @@ class DiscoverListVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         tableCell.delegate = self
         tableCell.dataSource = self
+        
+        print(customTabBarItem.index(ofAccessibilityElement: Any.self))
         
         downloadPlaces {
             

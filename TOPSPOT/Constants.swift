@@ -19,5 +19,6 @@ let base_nearby_search_url:String = "https://maps.googleapis.com/maps/api/place/
 let base_text_search_url:String = "https://maps.googleapis.com/maps/api/place/textsearch/json?"
 let base_details_url:String = "https://maps.googleapis.com/maps/api/place/details/json?"
 let base_photos_url:String = "https://maps.googleapis.com/maps/api/place/photo?"
+let autocomplete_url:String = "https://maps.googleapis.com/maps/api/place/autocomplete/json?"
 
 typealias DownloadComplete = () -> ()
